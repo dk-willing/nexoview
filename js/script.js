@@ -1,4 +1,4 @@
-const global = {
+const appContext = {
   path: window.location.pathname,
 };
 
@@ -289,7 +289,7 @@ function highLight() {
   const allLinks = document.querySelectorAll(".nav-link");
 
   allLinks.forEach((link) => {
-    if (link.getAttribute("href") === global.path) {
+    if (link.getAttribute("href") === appContext.path) {
       link.classList.add("active");
     }
   });
@@ -375,7 +375,7 @@ function initSwipper() {
 }
 
 function routes() {
-  switch (global.path) {
+  switch (appContext.path) {
     case "/":
     case "/index.html":
       displaySlider();
