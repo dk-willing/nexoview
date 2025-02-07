@@ -52,17 +52,9 @@ async function displayMovieDetails() {
                 <div class="details-img">
                   ${
                     movie.poster_path
-                      ? `
-                    <img
-                    src="https://images.tmdb.org/t/p/w500${movie.poster_path}"
-                    alt="Movie Title"
-                    class="movie-details-img"
-                  />`
-                      : `<img
-                    src="../img/no-image.jpg"
-                    alt="Movie Title"
-                    class="movie-details-img"
-                  />`
+                      ? ` 
+                    <img src="https://images.tmdb.org/t/p/w500${movie.poster_path}" alt="Movie Title" class="movie-details-img" />`
+                      : `<img src="../img/no-image.jpg" alt="Movie Title" class="movie-details-img" />`
                   }
                 </div>
                 <div class="details-text">
@@ -72,28 +64,18 @@ async function displayMovieDetails() {
                       1
                     )}</span> / 10
                   </p>
-
                   <p class="release-date">
                     <span class="text-muted">Release:</span>
                     <span class="text-bold">${movie.release_date}</span>
                   </p>
-
-                  <p class="movie-detail-description">
-                   ${movie.overview}
-                  </p>
-
+                  <p class="movie-detail-description">${movie.overview}</p>
                   <ul class="genres-list">
                     <p class="list-title">Genres</p>
                     ${movie.genres
-                      .map((genre) => {
-                        return `<li>${genre.name}</li>`;
-                      })
+                      .map((genre) => `<li>${genre.name}</li>`)
                       .join("")}
                   </ul>
-
-                  <a href="${
-                    movie.homepage
-                  }" class="details-btn" target="_blank">View Movie Homepage</a>
+                  <a href="${movie.homepage}" class="details-btn" target="_blank">View Movie Homepage</a>
                 </div>
               </div>
   `;
@@ -107,21 +89,15 @@ async function displayMovieDetails() {
                   <span class="tag">Revenue:</span> <span>$${movie.revenue.toLocaleString()}</span>
                 </p>
                 <p class="b-bottom">
-                  <span class="tag">Runtime:</span> <span>${
-                    movie.runtime
-                  } minutes</span>
+                  <span class="tag">Runtime:</span> <span>${movie.runtime} minutes</span>
                 </p>
                 <p class="b-bottom">
                   <span class="tag">Status:</span> <span>${movie.status}</span>
                 </p>
                 <p class="p-top">Production Companies</p>
-                <p>
-                  ${movie.production_companies
-                    .map((company) => {
-                      return `<span>${company.name}</span>`;
-                    })
-                    .join(", ")}
-                </p>
+                <p>${movie.production_companies
+                  .map((company) => `<span>${company.name}</span>`)
+                  .join(", ")}</p>
   `;
 
   document.querySelector(".upper").appendChild(divUpper);
@@ -179,16 +155,8 @@ async function displayShowDetails() {
                     ${
                       show.poster_path
                         ? `
-                      <img
-                      src="https://images.tmdb.org/t/p/w500${show.poster_path}"
-                      alt="Movie Title"
-                      class="movie-details-img"
-                    />`
-                        : `<img
-                      src="../img/no-image.jpg"
-                      alt="Movie Title"
-                      class="movie-details-img"
-                    />`
+                      <img src="https://images.tmdb.org/t/p/w500${show.poster_path}" alt="Movie Title" class="movie-details-img" />`
+                        : `<img src="../img/no-image.jpg" alt="Movie Title" class="movie-details-img" />`
                     }
                   </div>
                   <div class="details-text">
@@ -198,28 +166,18 @@ async function displayShowDetails() {
                         1
                       )}</span> / 10
                     </p>
-  
                     <p class="release-date">
                       <span class="text-muted">Release:</span>
                       <span class="text-bold">${show.first_air_date}</span>
                     </p>
-  
-                    <p class="movie-detail-description">
-                     ${show.overview}
-                    </p>
-  
+                    <p class="movie-detail-description">${show.overview}</p>
                     <ul class="genres-list">
                       <p class="list-title">Genres</p>
                       ${show.genres
-                        .map((genre) => {
-                          return `<li>${genre.name}</li>`;
-                        })
+                        .map((genre) => `<li>${genre.name}</li>`)
                         .join("")}
                     </ul>
-  
-                    <a href="${
-                      show.homepage
-                    }" class="details-btn" target="_blank">View Movie Homepage</a>
+                    <a href="${show.homepage}" class="details-btn" target="_blank">View Movie Homepage</a>
                   </div>
                 </div>
     `;
@@ -227,39 +185,27 @@ async function displayShowDetails() {
   divLower.innerHTML = `
                   <h3 class="details-title">Movie info</h3>
                   <p class="b-bottom">
-                    <span class="tag">Popularity:</span> <span>${show.popularity.toFixed(
-                      0
-                    )}</span>
+                    <span class="tag">Popularity:</span> <span>${show.popularity.toFixed(0)}</span>
                   </p>
                   <p class="b-bottom">
                     <span class="tag">Languages:</span> <span>
-                    ${show.spoken_languages.map((lang) => {
-                      return `<span>${lang.english_name}</span>`;
-                    })}
+                    ${show.spoken_languages.map((lang) => `<span>${lang.english_name}</span>`)}
                     </span>
                   </p>
                   <p class="b-bottom">
-                    <span class="tag">Number of Episodes:</span> <span>${
-                      show.number_of_episodes
-                    }</span>
+                    <span class="tag">Number of Episodes:</span> <span>${show.number_of_episodes}</span>
                   </p>
                   <p class="b-bottom">
                     <span class="tag">Status:</span> <span>${show.status}</span>
                   </p>
                   <p class="p-top">Production Companies</p>
-                  <p>
-                    ${show.production_companies
-                      .map((company) => {
-                        return `<span>${company.name}</span>`;
-                      })
-                      .join(", ")}
-                  </p>
-    `;
+                  <p>${show.production_companies
+                    .map((company) => `<span>${company.name}</span>`)
+                    .join(", ")}</p>
+  `;
 
   document.querySelector(".upper").appendChild(divUpper);
   document.querySelector(".lower").appendChild(divLower);
-
-  console.log(show);
 }
 
 async function fetchDataAPI(endpoint) {
