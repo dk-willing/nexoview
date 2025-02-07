@@ -289,7 +289,7 @@ function highLight() {
   const allLinks = document.querySelectorAll(".nav-link");
 
   allLinks.forEach((link) => {
-    if (link.getAttribute("href") === global.path.replace(/^\/|\/$/g, "")) {
+    if (link.getAttribute("href") === global.path) {
       link.classList.add("active");
     }
   });
@@ -376,21 +376,21 @@ function initSwipper() {
 
 function routes() {
   switch (global.path) {
-    case "/":
-    case "/index.html":
+    case "../":
+    case "../index.html":
       displaySlider();
       displayMovies();
       break;
-    case "/show-details.html":
+    case "../show-details.html":
       displayShowDetails();
       break;
-    case "/search.html":
+    case "../search.html":
       console.log("Search");
       break;
-    case "/movie-details.html":
+    case "../movie-details.html":
       displayMovieDetails();
       break;
-    case "/show.html":
+    case "../show.html":
       displayShows();
       break;
   }
