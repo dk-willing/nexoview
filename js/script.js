@@ -10,14 +10,14 @@ async function displayMovies() {
     div.classList.add("card");
 
     div.innerHTML = `
-            <a href="movie-details.html?id=${movie.id}">
+            <a href="/movie-details.html?id=${movie.id}">
                   <div class="card-img">
                     ${
                       movie.poster_path
                         ? `
                         <img src="https://images.tmdb.org/t/p/w500${movie.poster_path}" alt="" />
                         `
-                        : `<img src="img/no-image.jpg" alt="" />`
+                        : `<img src="/img/no-image.jpg" alt="" />`
                     }
                   </div>
                   <div class="card-text">
@@ -59,7 +59,7 @@ async function displayMovieDetails() {
                     class="movie-details-img"
                   />`
                       : `<img
-                    src="img/no-image.jpg"
+                    src="/img/no-image.jpg"
                     alt="Movie Title"
                     class="movie-details-img"
                   />`
@@ -136,14 +136,14 @@ async function displayShows() {
     div.classList.add("card");
 
     div.innerHTML = `
-      <a href="show-details.html?id=${show.id}">
+      <a href="/show-details.html?id=${show.id}">
                   <div class="card-img">
                     ${
                       show.poster_path
                         ? `
                         <img src="https://images.tmdb.org/t/p/w500${show.poster_path}" alt="" />
                         `
-                        : `<img src="img/no-image.jpg" alt="" />`
+                        : `<img src="/img/no-image.jpg" alt="" />`
                     }
                   </div>
                   <div class="card-text">
@@ -185,7 +185,7 @@ async function displayShowDetails() {
                       class="movie-details-img"
                     />`
                         : `<img
-                      src="img/no-image.jpg"
+                      src="/img/no-image.jpg"
                       alt="Movie Title"
                       class="movie-details-img"
                     />`
@@ -299,7 +299,7 @@ function displayBackdrop(type, backdroppath) {
   const overlayDiv = document.createElement("div");
 
   overlayDiv.style.backgroundImage = `url(
-    https://images.tmdb.org/t/p/original/${backdroppath}
+    https://image.tmdb.org/t/p/original/${backdroppath}
   )`;
   overlayDiv.style.backgroundPosition = "center";
   overlayDiv.style.backgroundSize = "cover";
@@ -330,8 +330,8 @@ async function displaySlider() {
     div.classList.add("swiper-slide");
 
     div.innerHTML = `
-                <a href="movie-details.html?id=${movie.id}">
-                  <img src="https://images.tmdb.org/t/p/w500${
+                <a href="/movie-details.html?id=${movie.id}">
+                  <img src="https://image.tmdb.org/t/p/w500${
                     movie.poster_path
                   }" alt="" />
                 </a>
@@ -366,6 +366,9 @@ function initSwipper() {
       },
       1200: {
         slidesPerView: 4,
+      },
+      zoom: {
+        maxRatio: 3,
       },
     },
   });
