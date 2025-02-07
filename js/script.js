@@ -376,21 +376,22 @@ function initSwipper() {
 
 function routes() {
   switch (global.path) {
-    case "../":
-    case "../index.html":
+    case "/":
+    case "/index.html":
       displaySlider();
       displayMovies();
+      console.log("Home");
       break;
-    case "../show-details.html":
+    case "/show-details.html":
       displayShowDetails();
       break;
-    case "../search.html":
+    case "/search.html":
       console.log("Search");
       break;
-    case "../movie-details.html":
+    case "/movie-details.html":
       displayMovieDetails();
       break;
-    case "../show.html":
+    case "/show.html":
       displayShows();
       break;
   }
