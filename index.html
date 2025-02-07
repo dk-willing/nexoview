@@ -25,19 +25,21 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/spinner.css" />
+    <link rel="stylesheet" href="lib/swiper.css" />
   </head>
   <body>
     <header class="header">
       <div class="logo">
-        <a href="/" class="logo-text">Nexoview</a>
+        <a href="index.html" class="logo-text">Nexoview</a>
       </div>
 
       <ul class="main-nav">
         <li class="main-nav-list">
-          <a href="/" class="nav-link">Movie</a>
+          <a href="/index.html" class="nav-link">Movie</a>
         </li>
         <li class="main-nav-list">
-          <a href="show.html" class="nav-link">TV Show</a>
+          <a href="/show.html" class="nav-link">TV Show</a>
         </li>
       </ul>
     </header>
@@ -46,6 +48,9 @@
       <section class="now-playing">
         <div class="container">
           <h3 class="heading-text">Now Playing</h3>
+          <div class="swiper">
+            <div class="swiper-wrapper"></div>
+          </div>
         </div>
       </section>
 
@@ -78,71 +83,14 @@
         <section class="section-popular">
           <div class="container">
             <h3 class="heading-text">Popular Movies</h3>
-            <div class="grid">
-              <div class="card">
-                <a href="movie-details.html?id=1">
-                  <div class="card-img">
-                    <img src="img/no-image.jpg" alt="" />
-                  </div>
-                  <div class="card-text">
-                    <h3 class="title">Movie Title</h3>
-                    <p class="date">
-                      <small class="text-muted">Release</small>
-                      <span class="text-bold">XX:XX:XXXX</span>
-                    </p>
-                  </div>
-                </a>
-              </div>
-              <div class="card">
-                <a href="movie-details.html?id=1">
-                  <div class="card-img">
-                    <img src="img/no-image.jpg" alt="" />
-                  </div>
-                  <div class="card-text">
-                    <h3 class="title">Movie Title</h3>
-                    <p class="date">
-                      <small class="text-muted">Release</small>
-                      <span class="text-bold">XX:XX:XXXX</span>
-                    </p>
-                  </div>
-                </a>
-              </div>
-              <div class="card">
-                <a href="movie-details.html?id=1">
-                  <div class="card-img">
-                    <img src="img/no-image.jpg" alt="" />
-                  </div>
-                  <div class="card-text">
-                    <h3 class="title">Movie Title</h3>
-                    <p class="date">
-                      <small class="text-muted">Release</small>
-                      <span class="text-bold">XX:XX:XXXX</span>
-                    </p>
-                  </div>
-                </a>
-              </div>
-              <div class="card">
-                <a href="movie-details.html?id=1">
-                  <div class="card-img">
-                    <img src="img/no-image.jpg" alt="" />
-                  </div>
-                  <div class="card-text">
-                    <h3 class="title">Movie Title</h3>
-                    <p class="date">
-                      <span class="text-muted">Release</span>
-                      <span class="text-bold">XX:XX:XXXX</span>
-                    </p>
-                  </div>
-                </a>
-              </div>
-            </div>
+            <div class="grid" id="popular-movies"></div>
           </div>
         </section>
 
         <section class="footer-section">
           <footer class="footer">
             <div class="logo">
-              <a href="/" class="logo-text">Nexoview</a>
+              <a href="index.html" class="logo-text">Nexoview</a>
             </div>
 
             <div class="social-links">
@@ -157,5 +105,9 @@
         </section>
       </div>
     </main>
+
+    <div class="spinner"></div>
+
+    <script src="js/script.js"></script>
   </body>
 </html>

@@ -25,6 +25,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/spinner.css" />
   </head>
   <body>
     <header class="header">
@@ -34,10 +35,10 @@
 
       <ul class="main-nav">
         <li class="main-nav-list">
-          <a href="/" class="nav-link">Movie</a>
+          <a href="/index.html" class="nav-link">Movie</a>
         </li>
         <li class="main-nav-list">
-          <a href="show.html" class="nav-link">TV Show</a>
+          <a href="/show.html" class="nav-link">TV Show</a>
         </li>
       </ul>
     </header>
@@ -45,66 +46,13 @@
     <div class="main-sections">
       <main>
         <div class="container">
-          <section class="details-section">
-            <a href="index.html" class="details-btn"
-              ><i class="fa-solid fa-arrow-left"></i> Back to home</a
+          <section class="details-section" id="show-main">
+            <a href="show.html" class="details-btn"
+              ><i class="fa-solid fa-arrow-left"></i> Back to Shows</a
             >
 
-            <div class="movie-details">
-              <div class="details-img">
-                <img
-                  src="img/no-image.jpg"
-                  alt="Movie Title"
-                  class="movie-details-img"
-                />
-              </div>
-              <div class="details-text">
-                <h3 class="details-title">Movie Title</h3>
-                <p class="details-rating">
-                  <i class="fa-solid fa-star"></i> <span>6.9</span> / 10
-                </p>
-
-                <p class="release-date">
-                  <span class="text-muted">Release:</span>
-                  <span class="text-bold">XX:XX:XXXX</span>
-                </p>
-
-                <p class="movie-detail-description">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est
-                  quia voluptatem, mollitia eveniet aut porro ratione cum
-                  aliquam? Porro, tempore?
-                </p>
-
-                <ul class="genres-list">
-                  <li class="list-title">Genres</li>
-                  <li>Genre 1</li>
-                  <li>Genre 2</li>
-                  <li>Genre 3</li>
-                </ul>
-
-                <a href="#" class="details-btn">View Movie Homepage</a>
-              </div>
-            </div>
-
-            <div class="more-info">
-              <h3 class="details-title">Movie info</h3>
-              <p class="b-bottom">
-                <span class="tag">Budget:</span> <span>$120,000,000</span>
-              </p>
-              <p class="b-bottom">
-                <span class="tag">Revenue:</span> <span>$12,000,000</span>
-              </p>
-              <p class="b-bottom">
-                <span class="tag">Runtime:</span> <span>120 minutes</span>
-              </p>
-              <p class="b-bottom">
-                <span class="tag">Status:</span> <span>Released</span>
-              </p>
-              <p class="p-top">Production Companies</p>
-              <p>
-                Columbia Pictures, Matt Tolmach Productions, Arad Productions
-              </p>
-            </div>
+            <div class="upper"></div>
+            <div class="lower"></div>
           </section>
         </div>
       </main>
@@ -126,5 +74,9 @@
         </p>
       </section>
     </div>
+
+    <div class="spinner"></div>
+
+    <script src="js/script.js"></script>
   </body>
 </html>
