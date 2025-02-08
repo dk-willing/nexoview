@@ -37,10 +37,10 @@
 
       <ul class="main-nav">
         <li class="main-nav-list">
-          <a href="./index.html" class="nav-link">Movie</a>
+          <a href="/index.html" class="nav-link">Movie</a>
         </li>
         <li class="main-nav-list">
-          <a href="./show.html" class="nav-link">TV Show</a>
+          <a href="/show.html" class="nav-link">TV Show</a>
         </li>
       </ul>
     </header>
@@ -58,12 +58,18 @@
       <div class="main-sections">
         <section class="form-section">
           <div class="container">
-            <div class="alert"></div>
-            <form class="search-form" accept="/search.html">
+            <div id="alert"></div>
+            <form class="search-form" action="/search.html">
               <div class="radio">
-                <input type="radio" name="type" id="movie" value="movie" />
+                <input
+                  type="radio"
+                  name="type"
+                  id="movie"
+                  value="movie"
+                  checked
+                />
                 <label for="movie">Movie</label>
-                <input type="radio" name="type" id="show" value="show" />
+                <input type="radio" name="type" id="show" value="tv" />
                 <label for="show">TV Show</label>
               </div>
               <div class="search-input">
@@ -73,7 +79,7 @@
                   id="search-term"
                   placeholder="Enter search term"
                 />
-                <button class="search-btn">
+                <button class="search-btn" type="submit">
                   <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
               </div>
